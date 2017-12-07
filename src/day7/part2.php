@@ -73,16 +73,16 @@ function getUnbalanced(array $programs, string $programName)
     }
 
     $unbalancedWeight = array_filter(
-        array_count_values($weights), function ($a) {
-        return $a == 1;
-    }
+            array_count_values($weights), function ($a) {
+            return $a == 1;
+        }
     );
 
     $normalWeight = array_keys(
         array_filter(
-            array_count_values($weights), function ($a) {
-            return $a != 1;
-        }
+                array_count_values($weights), function ($a) {
+                return $a != 1;
+            }
         )
     )[0];
 
