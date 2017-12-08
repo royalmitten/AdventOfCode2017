@@ -19,8 +19,6 @@ foreach ($input as $instruction) {
     if (getCondition($conditionOperator, $registers[$conditionRegister], $conditionValue)) {
         $registers[$operationRegister] = getOperation($operator, $registers[$operationRegister], $operatorValue);
     }
-
-
 }
 
 function getOperation(string $operator, int $item, int $value): int
