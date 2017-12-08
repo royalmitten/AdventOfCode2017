@@ -42,7 +42,7 @@ function getOperation(string $operator, int $item, int $value): int
     return $item;
 }
 
-function getCondition(string $operator, int $item, int $value)
+function getCondition(string $operator, int $item, int $value): bool
 {
     switch ($operator) {
         case '>':
